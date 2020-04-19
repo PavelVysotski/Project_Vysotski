@@ -22,6 +22,13 @@ public class Orders {
         this.updatedAt = updatedAt;
     }
 
+    private Orders(int customerId, int computerId, int count, int totalCost) {
+        this.customerId = customerId;
+        this.computerId = computerId;
+        this.count = count;
+        this.totalCost = totalCost;
+    }
+
     public int getId() {
         return id;
     }
@@ -76,6 +83,10 @@ public class Orders {
 
     public void setUpdatedAt(Date updatedAt) {
         this.updatedAt = updatedAt;
+    }
+
+    public static Orders createNewItemOrders(int customerId, int computerId, int count, int totalCost){
+        return new Orders(customerId, computerId, count, totalCost);
     }
 
     @Override

@@ -20,6 +20,12 @@ public class Customers {
         this.updatedAt = updatedAt;
     }
 
+    public Customers(String company, String contactPerson, String phone) {
+        this.company = company;
+        this.contactPerson = contactPerson;
+        this.phone = phone;
+    }
+
     public int getId() {
         return id;
     }
@@ -66,6 +72,10 @@ public class Customers {
 
     public void setUpdatedAt(Date updatedAt) {
         this.updatedAt = updatedAt;
+    }
+
+    public static Customers createNewItemCustom(String company, String contactPerson, String phone){
+        return new Customers(company, contactPerson, phone);
     }
 
     @Override

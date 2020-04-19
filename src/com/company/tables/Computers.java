@@ -141,17 +141,16 @@ public class Computers {
         this.updatedAt = updatedAt;
     }
 
-public static Computers createNewItem(String optionNumb, String processor, String compType, int ramGb, int hddGb, int ssdGb,
-                                      String videoCard, String monitorInch, int price){
+    public static Computers createNewItemComp(String optionNumb, String processor, String compType, int ramGb, int hddGb, int ssdGb,
+                                              String videoCard, String monitorInch, int price) {
         return new Computers(optionNumb, processor, compType, ramGb, hddGb, ssdGb, videoCard, monitorInch, price);
-}
+    }
 
     @Override
     public String toString() {
         return id + ". " + optionNumb + " " + processor + " " + compType + " " + ramGb + " " + hddGb + " " +
                 ssdGb + " " + videoCard + " " + monitorInch + " " + price + " " + createdAt + " " + updatedAt;
     }
-
 
 
 }
