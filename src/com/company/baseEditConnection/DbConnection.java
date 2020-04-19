@@ -1,4 +1,4 @@
-package com.company.base;
+package com.company.baseEditConnection;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

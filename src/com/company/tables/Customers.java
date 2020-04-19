@@ -80,7 +80,7 @@ public class Customers {
 
     @Override
     public String toString() {
-        return id + ". " + company + " " + contactPerson + " " + phone + " " + createdAt + " " + updatedAt;
+        return id + ". Компания: " + company + ", контакное лицо: " + contactPerson + ", телефон: " + phone + ", " + createdAt + ", " + updatedAt;
     }
 
 }

@@ -1,4 +1,4 @@
-package com.company.base;
+package com.company.baseEditConnection;
 
 import com.company.tables.Computers;
 import com.company.util.ComputersUtil;
@@ -12,9 +12,9 @@ public class ComputersConnection {
 
     private static final String SELECT_ALL = "SELECT * FROM computers ORDER BY id ASC";
     private static final String SELECT_BY_ID = "SELECT * FROM computers WHERE id = ?";
-    private static final String ADD = "INSERT INTO computers (option_numb, processor, comp_type, ram_gb, hdd_gb, ssd_gb, videocard, monitor_inch, price)" +
+    private static final String ADD = "INSERT INTO computers (option_numb, comp_type, processor, ram_gb, hdd_gb, ssd_gb, videocard, monitor_inch, price)" +
             "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
-    private static final String UPDATE = "UPDATE computers SET option_numb = ?, processor = ?, comp_type = ?, ram_gb = ?, hdd_gb = ?, ssd_gb = ?, videocard = ?, " +
+    private static final String UPDATE = "UPDATE computers SET option_numb = ?, comp_type = ?, processor = ?, ram_gb = ?, hdd_gb = ?, ssd_gb = ?, videocard = ?, " +
             "monitor_inch = ?, price = ?, updated_at = ? WHERE id = ?";
     private static final String DELETE_BY_ID = "DELETE FROM computers WHERE id = ?";
 
@@ -39,8 +39,8 @@ public class ComputersConnection {
                 PreparedStatement statement = connection.prepareStatement(ADD);
         ) {
             String optionNumb = computers.getOptionNumb();
-            String processor = computers.getProcessor();
             String compType = computers.getCompType();
+            String processor = computers.getProcessor();
             int ramGb = computers.getRamGb();
             int hddGb = computers.getHddGb();
             int ssdGb = computers.getSsdGb();
@@ -49,8 +49,8 @@ public class ComputersConnection {
             int price = computers.getPrice();
 
             statement.setString(1, optionNumb);
-            statement.setString(2, processor);
-            statement.setString(3, compType);
+            statement.setString(2, compType);
+            statement.setString(3, processor);
             statement.setInt(4, ramGb);
             statement.setInt(5, hddGb);
             statement.setInt(6, ssdGb);
@@ -82,8 +82,8 @@ public class ComputersConnection {
                 PreparedStatement statement = connection.prepareStatement(UPDATE);
         ) {
             statement.setString(1, computers.getOptionNumb());
-            statement.setString(2, computers.getProcessor());
-            statement.setString(3, computers.getCompType());
+            statement.setString(2, computers.getCompType());
+            statement.setString(3, computers.getProcessor());
             statement.setInt(4, computers.getRamGb());
             statement.setInt(5, computers.getHddGb());
             statement.setInt(6, computers.getSsdGb());

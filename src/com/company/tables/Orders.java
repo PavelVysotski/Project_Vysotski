@@ -91,6 +91,6 @@ public class Orders {
 
     @Override
     public String toString() {
-        return id + ". " + customerId + " " + computerId + " " + count + " " + totalCost + " " + createdAt + " " + updatedAt;
+        return id + ". № Заказчика: " + customerId + ", вариант компьютера: " + computerId + ", кол-во: " + count + ", стоимость итого: " + totalCost + ", " + createdAt + ", " + updatedAt;
     }
 }

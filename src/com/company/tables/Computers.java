@@ -6,8 +6,8 @@ import java.util.Objects;
 public class Computers {
     private int id;
     private String optionNumb;
-    private String processor;
     private String compType;
+    private String processor;
     private int ramGb;
     private int hddGb;
     private int ssdGb;
@@ -17,12 +17,12 @@ public class Computers {
     private Date createdAt;
     private Date updatedAt;
 
-    public Computers(int id, String optionNumb, String processor, String compType, int ramGb, int hddGb, int ssdGb,
+    public Computers(int id, String optionNumb, String compType, String processor, int ramGb, int hddGb, int ssdGb,
                      String videoCard, String monitorInch, int price, Date createdAt, Date updatedAt) {
         this.id = id;
         this.optionNumb = optionNumb;
-        this.processor = processor;
-        this.compType = compType;
+        this.processor = compType;
+        this.compType = processor;
         this.ramGb = ramGb;
         this.hddGb = hddGb;
         this.ssdGb = ssdGb;
@@ -33,10 +33,10 @@ public class Computers {
         this.updatedAt = updatedAt;
     }
 
-    private Computers(String optionNumb, String processor, String compType, int ramGb, int hddGb, int ssdGb, String videoCard, String monitorInch, int price) {
+    private Computers(String optionNumb, String compType, String processor, int ramGb, int hddGb, int ssdGb, String videoCard, String monitorInch, int price) {
         this.optionNumb = optionNumb;
-        this.processor = processor;
-        this.compType = compType;
+        this.processor = compType;
+        this.compType = processor;
         this.ramGb = ramGb;
         this.hddGb = hddGb;
         this.ssdGb = ssdGb;
@@ -141,17 +141,16 @@ public class Computers {
         this.updatedAt = updatedAt;
     }
 
-    public static Computers createNewItemComp(String optionNumb, String processor, String compType, int ramGb, int hddGb, int ssdGb,
+    public static Computers createNewItemComp(String optionNumb, String compType, String processor, int ramGb, int hddGb, int ssdGb,
                                               String videoCard, String monitorInch, int price) {
-        return new Computers(optionNumb, processor, compType, ramGb, hddGb, ssdGb, videoCard, monitorInch, price);
+        return new Computers(optionNumb, compType, processor, ramGb, hddGb, ssdGb, videoCard, monitorInch, price);
     }
 
     @Override
     public String toString() {
-        return id + ". " + optionNumb + " " + processor + " " + compType + " " + ramGb + " " + hddGb + " " +
-                ssdGb + " " + videoCard + " " + monitorInch + " " + price + " " + createdAt + " " + updatedAt;
+        return id + ". Характеристики комп: " + optionNumb + ", тип: " + compType + ", проц.:" + processor + ", память: " + ramGb + ", HDD: " + hddGb + ", SSD: " +
+                ssdGb + ", видео: " + videoCard + ", монитор: " + monitorInch + ", цена: " + price + ", " + createdAt + ", " + updatedAt;
     }
-
 
 }
 

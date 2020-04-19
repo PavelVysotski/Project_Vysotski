@@ -1,9 +1,7 @@
-package com.company.base;
+package com.company.baseEditConnection;
 
-import com.company.tables.Customers;
 import com.company.tables.Orders;
 import com.company.util.CurrentDateUtil;
-import com.company.util.CustomersUtil;
 import com.company.util.OrdersUtil;
 
 import java.sql.*;
@@ -15,7 +13,7 @@ public class OrdersConnection {
     private static final String SELECT_ALL = "SELECT * FROM orders ORDER BY id ASC";
     private static final String SELECT_BY_ID = "SELECT * FROM orders WHERE id = ?";
     private static final String ADD = "INSERT INTO orders (customer_id, computer_id, count, total_cost) VALUES (?, ?, ?, ?)";
-    private static final String UPDATE = "UPDATE orders SET customer_id = ?, computer_id = ?, count = ?, updated_at = ?, total_cost = ? WHERE id = ?";
+    private static final String UPDATE = "UPDATE orders SET customer_id = ?, computer_id = ?, count = ?, total_cost = ?, updated_at = ? WHERE id = ?";
     private static final String DELETE_BY_ID = "DELETE FROM orders WHERE id = ?";
 
     public static List<Orders> selectAll() throws SQLException {
