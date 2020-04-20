@@ -1,4 +1,4 @@
-package com.company.baseEditConnection;
+package com.company.baseConnection;
 
 import com.company.tables.Customers;
 import com.company.util.CurrentDateUtil;
