@@ -2,23 +2,17 @@ package com.company;
 
 //create at 17.04.2020 by Vysotski Pavel
 
-import com.company.baseEditConnection.JoinConnection;
-import com.company.baseEditConnection.ComputersConnection;
-import com.company.baseEditConnection.CustomersConnection;
-import com.company.baseEditConnection.OrdersConnection;
-import com.company.tables.Computers;
-import com.company.tables.Customers;
-import com.company.tables.Orders;
+import com.company.baseEditConnection.*;
 
 import java.sql.*;
-import java.util.List;
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) throws SQLException {
-
+                ShowAllDb.showAllComp();
         //Добавляем новый объект в Computers
-        showAllComp();
+//        ShowAllDb.showAllComp();
 
 //        Computers computers = Computers.createNewItemComp("Вариант 8", "Intel Core i3-6100", "HOME", 8, 1000, 0, "встроенная", "AOC 21.4", 730);
 //        ComputersConnection.add(computers);
@@ -87,43 +81,10 @@ public class Main {
 
 //        showAllOrders();
 
-        JoinConnection.ChoiceInfo();
-    }
-
-    public static void showAllComp() throws SQLException {
-        List<Computers> result = ComputersConnection.selectAll();
-
-        for ( Computers computers : result ) {
-            System.out.println(computers);
-        }
-
-        System.out.println();
-        System.out.println();
-        System.out.println();
-    }
-
-    public static void showAllCustom() throws SQLException {
-        List<Customers> result = CustomersConnection.selectAll();
-
-        for ( Customers customers : result ) {
-            System.out.println(customers);
-        }
-
-        System.out.println();
-        System.out.println();
-        System.out.println();
-    }
-
-    public static void showAllOrders() throws SQLException {
-        List<Orders> result = OrdersConnection.selectAll();
-
-        for ( Orders orders : result ) {
-            System.out.println(orders);
-        }
-
-        System.out.println();
-        System.out.println();
-        System.out.println();
+        //Выводим Join
+//        JoinConnection.ChoiceInfo();
+//        JoinConnection.infoCompId();
+//        JoinConnection.infoCustomId();
     }
 }
 

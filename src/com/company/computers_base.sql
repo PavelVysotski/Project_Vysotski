@@ -15,13 +15,13 @@ CREATE TABLE computers(
    updated_at TIMESTAMP
 );
 
-INSERT INTO computers (option_numb, comp_type, processor, ram_gb, hdd_gb, ssd_gb, videocard, monitor_inch, price, updated_at) VALUES ('Вариант 1', 'WORK', 'Intel Pentium G5400, 3.7GHz', 8, 1000, NULL, 'встроенная', 'Samsung 21', 650, NULL);
-INSERT INTO computers (option_numb, comp_type, processor, ram_gb, hdd_gb, ssd_gb, videocard, monitor_inch, price, updated_at) VALUES ('Вариант 2', 'WORK', 'Intel Core i3-8100, 3.6GHz', 8, 1000, '240', 'встроенная', 'Samsung 21', 870, NULL);
-INSERT INTO computers (option_numb, comp_type, processor, ram_gb, hdd_gb, ssd_gb, videocard, monitor_inch, price, updated_at) VALUES ('Вариант 3', 'HOME', 'Intel Core i3-8100, 3.6GHz', 8, 1000, NULL, 'GeForce 750GT 2Gb', 'Philips 24', 1230, NULL);
-INSERT INTO computers (option_numb, comp_type, processor, ram_gb, hdd_gb, ssd_gb, videocard, monitor_inch, price, updated_at) VALUES ('Вариант 4', 'HOME', 'Intel Core i3-8100, 3.6GHz', 16, 1000, '240', 'GeForce 750GT 2Gb', 'Philips 24', 1440, NULL);
-INSERT INTO computers (option_numb, comp_type, processor, ram_gb, hdd_gb, ssd_gb, videocard, monitor_inch, price, updated_at) VALUES ('Вариант 5', 'HOME', 'Intel Core i5-8400, 2.8GHz', 16, 1000, '240', 'ATI R5 230 2Gb', 'LG 24', 1610, NULL);
-INSERT INTO computers (option_numb, comp_type, processor, ram_gb, hdd_gb, ssd_gb, videocard, monitor_inch, price, updated_at) VALUES ('Вариант 6', 'GAMER', 'Intel Core i7-9700KF, 3.6GHZ', 32, 1000, '480', 'ATI RX 5700 XT 8Gb', 'Philips 27', 3900, NULL);
-INSERT INTO computers (option_numb, comp_type, processor, ram_gb, hdd_gb, ssd_gb, videocard, monitor_inch, price, updated_at) VALUES ('Вариант 7', 'GAMER', 'Intel Core i9-9900KF, 3.6GHZ', 32, 2000, '1000', 'GF RTX 2070 SUPER 8Gb', 'Philips 27', 4500, NULL);
+INSERT INTO computers (option_numb, comp_type, processor, ram_gb, hdd_gb, ssd_gb, videocard, monitor_inch, price, updated_at) VALUES ('Вариант 1', 'WORK', 'Intel Pentium G5400', 8, 1000, 0, 'встроенная', 'Samsung 21', 650, NULL);
+INSERT INTO computers (option_numb, comp_type, processor, ram_gb, hdd_gb, ssd_gb, videocard, monitor_inch, price, updated_at) VALUES ('Вариант 2', 'WORK', 'Intel Core i3-8100', 8, 1000, '240', 'встроенная', 'Samsung 21', 870, NULL);
+INSERT INTO computers (option_numb, comp_type, processor, ram_gb, hdd_gb, ssd_gb, videocard, monitor_inch, price, updated_at) VALUES ('Вариант 3', 'HOME', 'Intel Core i3-8100', 8, 1000, 0, 'GeForce 750GT 2Gb', 'Philips 24', 1230, NULL);
+INSERT INTO computers (option_numb, comp_type, processor, ram_gb, hdd_gb, ssd_gb, videocard, monitor_inch, price, updated_at) VALUES ('Вариант 4', 'HOME', 'Intel Core i3-8100', 16, 1000, '240', 'GeForce 750GT 2Gb', 'Philips 24', 1440, NULL);
+INSERT INTO computers (option_numb, comp_type, processor, ram_gb, hdd_gb, ssd_gb, videocard, monitor_inch, price, updated_at) VALUES ('Вариант 5', 'HOME', 'Intel Core i5-8400', 16, 1000, '240', 'ATI R5 230 2Gb', 'LG 24', 1610, NULL);
+INSERT INTO computers (option_numb, comp_type, processor, ram_gb, hdd_gb, ssd_gb, videocard, monitor_inch, price, updated_at) VALUES ('Вариант 6', 'GAMER', 'Intel Core i7-9700KF', 32, 1000, '480', 'ATI RX 5700 XT 8Gb', 'Philips 27', 3900, NULL);
+INSERT INTO computers (option_numb, comp_type, processor, ram_gb, hdd_gb, ssd_gb, videocard, monitor_inch, price, updated_at) VALUES ('Вариант 7', 'GAMER', 'Intel Core i9-9900KF', 32, 2000, '1000', 'GF RTX 2070 SUPER 8Gb', 'Philips 27', 4500, NULL);
 
 CREATE TABLE customers(
    id SERIAL PRIMARY KEY,
@@ -52,4 +52,3 @@ INSERT INTO orders (customer_id, computer_id, count, total_cost) VALUES ('2', '5
 INSERT INTO orders (customer_id, computer_id, count, total_cost) VALUES ('3', '3', '7', '8610');
 INSERT INTO orders (customer_id, computer_id, count, total_cost) VALUES ('4', '1', '5', '3250');
 
-select customer_id, company, option_numb, count, total_cost from orders o join customers c on o.customer_id=c.id join computers comp on o.computer_id=comp.id
