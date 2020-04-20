@@ -1,5 +1,6 @@
-package com.company;
+package com.company.menuAction;
 
+import com.company.CommandReader;
 import com.company.baseConnection.JoinConnection;
 
 import java.sql.SQLException;
@@ -9,6 +10,7 @@ public class JoinAction {
         boolean joinLoop = true;
         while (joinLoop) {
 
+            MenuText.joinMenu();
             int joinChoice = CommandReader.readNumber("Ваш выбор:");
             System.out.println(joinChoice);
             switch (joinChoice) {
@@ -21,7 +23,6 @@ public class JoinAction {
                 case 3:
                     joinLoop = false;
                     continue;
-
             }
         }
 

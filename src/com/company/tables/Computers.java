@@ -148,7 +148,7 @@ public class Computers {
 
     @Override
     public String toString() {
-        return id + ". Характеристики комп: " + optionNumb + ", тип: " + compType + ", проц.:" + processor + ", память: " + ramGb + ", HDD: " + hddGb + ", SSD: " +
+        return id + ". Конфигурация: " + optionNumb + ", тип: " + compType + ", проц.:" + processor + ", память: " + ramGb + ", HDD: " + hddGb + ", SSD: " +
                 ssdGb + ", видео: " + videoCard + ", монитор: " + monitorInch + ", цена: " + price + ", " + createdAt + ", " + updatedAt;
     }
 
