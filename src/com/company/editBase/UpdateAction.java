@@ -15,27 +15,27 @@ import java.sql.SQLException;
 
 public class UpdateAction {
 
-    public static void updateCompAllData() throws SQLException {
+    public static void updateCompFromId() throws SQLException {
 
         int compNumb = CommandReader.readNumber("Введите порядковый номер компьютера: ");
         Computers computers = ComputersConnection.selectFromId(compNumb);
-        String option = CommandReader.readString("Введите вариант конфигурации: ");
+        String option = CommandReader.readString("Введите новый вариант конфигурации: ");
         computers.setOptionNumb(option);
-        String type = CommandReader.readString("Введите тип компьютера(HOME, WORK, GAMER)");
+        String type = CommandReader.readString("Введите новый тип компьютера(HOME, WORK, GAMER)");
         computers.setCompType(type);
-        String processor = CommandReader.readString("Введите модель процессора: ");
+        String processor = CommandReader.readString("Введите новую модель процессора: ");
         computers.setProcessor(processor);
-        int ram = CommandReader.readNumber("Введите объем памяти: ");
+        int ram = CommandReader.readNumber("Введите новый объем памяти: ");
         computers.setRamGb(ram);
-        int hdd = CommandReader.readNumber("Введите объем жесткого диска: ");
+        int hdd = CommandReader.readNumber("Введите новый объем жесткого диска: ");
         computers.setHddGb(hdd);
-        int ssd = CommandReader.readNumber("Введите объем SSD: ");
+        int ssd = CommandReader.readNumber("Введите новый объем SSD: ");
         computers.setSsdGb(ssd);
-        String video = CommandReader.readString("Ввведите модель видеокарты: ");
+        String video = CommandReader.readString("Ввведите новую модель видеокарты: ");
         computers.setVideoCard(video);
-        String monitor = CommandReader.readString("Введите модель монитора: ");
+        String monitor = CommandReader.readString("Введите новую модель монитора: ");
         computers.setMonitorInch(monitor);
-        int price = CommandReader.readNumber("Введите цену компьютера: ");
+        int price = CommandReader.readNumber("Введите новую цену компьютера: ");
         computers.setPrice(price);
         ComputersConnection.update(computers);
 
@@ -46,6 +46,7 @@ public class UpdateAction {
         int compNumb = CommandReader.readNumber("Введите порядковый номер компьютера: ");
         Computers computers = ComputersConnection.selectFromId(compNumb);
         while (updateLoop) {
+            MenuText.choiceUpdateComp();
             int updateChoice = CommandReader.readNumber("Ваш выбор: ");
             switch (updateChoice) {
                 case 1:
@@ -54,7 +55,7 @@ public class UpdateAction {
                     ComputersConnection.update(computers);
                     break;
                 case 2:
-                    String type = CommandReader.readString("Введите новый тип компьютера(HOME, WORK, GAMER)");
+                    String type = CommandReader.readString("Введите новый тип компьютера(HOME, WORK, GAMER):");
                     computers.setCompType(type);
                     ComputersConnection.update(computers);
                     break;
@@ -145,13 +146,13 @@ public class UpdateAction {
     public static void updateOrdersFromId() throws SQLException {
         int ordersNumb = CommandReader.readNumber("Ваш порядковый номер заказа: ");
         Orders orders = OrdersConnection.selectFromId(ordersNumb);
-        int customer = CommandReader.readNumber("Введите номер заказчика из таблицы Заказчики:");
+        int customer = CommandReader.readNumber("Введите новый номер заказчика из таблицы Заказчики:");
         orders.setCustomerId(customer);
-        int computer = CommandReader.readNumber("Введите номер компьютера из таблица Компьютеры: ");
+        int computer = CommandReader.readNumber("Введите новый номер компьютера из таблица Компьютеры: ");
         orders.setComputerId(computer);
-        int count = CommandReader.readNumber("Введите количество купленных компьютеров: ");
+        int count = CommandReader.readNumber("Введите новыое количество приобретенных компьютеров: ");
         orders.setCount(count);
-        int total_cost = CommandReader.readNumber("Введите сумму итого: ");
+        int total_cost = CommandReader.readNumber("Введите новую сумму итого: ");
         orders.setTotalCost(total_cost);
         OrdersConnection.update(orders);
     }
@@ -164,22 +165,22 @@ public class UpdateAction {
             int updateChoice = CommandReader.readNumber("Ваш выбор");
             switch (updateChoice) {
                 case 1:
-                    int customer = CommandReader.readNumber("Введите номер заказчика из таблицы Заказчики:");
+                    int customer = CommandReader.readNumber("Введите новый номер заказчика из таблицы Заказчики:");
                     orders.setCustomerId(customer);
                     OrdersConnection.update(orders);
                     break;
                 case 2:
-                    int computer = CommandReader.readNumber("Введите номер компьютера из таблица Компьютеры: ");
+                    int computer = CommandReader.readNumber("Введите новый номер компьютера из таблица Компьютеры: ");
                     orders.setComputerId(computer);
                     OrdersConnection.update(orders);
                     break;
                 case 3:
-                    int count = CommandReader.readNumber("Введите количество купленных компьютеров: ");
+                    int count = CommandReader.readNumber("Введите новое количество приобретенных компьютеров: ");
                     orders.setCount(count);
                     OrdersConnection.update(orders);
                     break;
                 case 4:
-                    int total_cost = CommandReader.readNumber("Введите сумму итого: ");
+                    int total_cost = CommandReader.readNumber("Введите новую сумму итого: ");
                     orders.setTotalCost(total_cost);
                     OrdersConnection.update(orders);
                     break;

@@ -41,7 +41,7 @@ public class MenuText {
         System.out.println("4. Вернуться в главное меню.");
     }
 
-    public static void choiceUpdateMenu() {
+    public static void choiceUpdateCompMenu() {
         System.out.println("1. Изменить все данные по порядковому номеру компьютера.");
         System.out.println("2. Изменить выборочные данные по порядковому номеру компьютера.");
         System.out.println("3. Вернуться в главное меню.");
@@ -59,6 +59,35 @@ public class MenuText {
         System.out.println("8. Изменить модель монитора.");
         System.out.println("9. Изменить стоимость компьютера.");
         System.out.println("10. Вернуться в главное меню.");
+    }
+
+    public static void choiceUpdateCustomMenu (){
+        System.out.println("1. Изменить все данные по порядковому номеру заказчика.");
+        System.out.println("2. Изменить выборочные данные по порядковому номеру заказчика.");
+        System.out.println("3. Вернуться в главное меню.");
+    }
+
+    public static void choiceUpdateCustom () {
+        System.out.println("1. Изменить название компании.");
+        System.out.println("2. Изменить контактное лицо.");
+        System.out.println("3. Изменить контактный телефон.");
+        System.out.println("4. Вернуться в главное меню.");
+
+    }
+
+    public static void choiceUpdateOrdersMenu (){
+        System.out.println("1. Изменить все данные по порядковому номеру заказа.");
+        System.out.println("2. Изменить выборочные данные по порядковому номеру заказа.");
+        System.out.println("3. Вернуться в главное меню.");
+    }
+
+    public static void choiceUpdateOrders () {
+        System.out.println("1. Изменить номер заказчика.");
+        System.out.println("2. Изменить вариант компьютера.");
+        System.out.println("3. Изменить количество приобретенных компьютеров.");
+        System.out.println("4. Изменить сумму итого.");
+        System.out.println("5. Вернуться в главное меню.");
+
     }
 
 }

@@ -2,6 +2,7 @@ package com.company.menuAction;
 
 import com.company.CommandReader;
 import com.company.baseConnection.JoinConnection;
+import com.company.editBase.UpdateChoice;
 import com.company.showBase.JoinAction;
 import com.company.showBase.ShowAction;
 import com.company.showBase.ShowAllDb;
@@ -9,7 +10,7 @@ import com.company.editBase.AddChoice;
 
 import java.sql.SQLException;
 
-public class MainMenuAction {
+public class MainMenuChoice {
 
     public static void worker() throws SQLException {
         boolean mainLoop = true;
@@ -39,7 +40,7 @@ public class MainMenuAction {
                     AddChoice.addAction();
                     break;
                 case 7:
-
+                    UpdateChoice.update();
                 case 9:
                     mainLoop = false;
                     break;
