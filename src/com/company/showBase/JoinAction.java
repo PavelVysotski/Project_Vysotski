@@ -1,7 +1,8 @@
-package com.company.menuAction;
+package com.company.showBase;
 
 import com.company.CommandReader;
 import com.company.baseConnection.JoinConnection;
+import com.company.menuAction.MenuText;
 
 import java.sql.SQLException;
 
@@ -23,6 +24,8 @@ public class JoinAction {
                 case 3:
                     joinLoop = false;
                     continue;
+                default:
+                    System.out.println("Такого номера нет, повторите Ваш выбор:");
             }
         }
 

@@ -2,8 +2,9 @@ package com.company.editBase;
 
 import com.company.CommandReader;
 import com.company.baseConnection.ComputersConnection;
+import com.company.baseConnection.CustomersConnection;
+import com.company.showBase.ShowAllDb;
 import com.company.menuAction.MenuText;
-import com.company.tables.Computers;
 
 import java.sql.SQLException;
 
@@ -17,9 +18,23 @@ public class AddChoice {
             switch (addChoice) {
                 case 1:
                     AddAction.addComputers();
+                    ComputersConnection.selectAll();
                     break;
+                case 2:
+                    AddAction.addCustomers();
+                    CustomersConnection.selectAll();
+                    break;
+                case 3:
+                    ShowAllDb.showAllComp();
+                    ShowAllDb.showAllCustom();
+                    AddAction.addOrders();
+                    break;
+                case 4:
+                    addLoop = false;
+                    continue;
+                default:
+                    System.out.println("Такого номера нет, повторите Ваш выбор:");
             }
         }
-        MenuText.addMenu();
     }
 }

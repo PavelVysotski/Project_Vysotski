@@ -1,5 +1,8 @@
-package com.company.baseConnection;
+package com.company.showBase;
 
+import com.company.baseConnection.ComputersConnection;
+import com.company.baseConnection.CustomersConnection;
+import com.company.baseConnection.OrdersConnection;
 import com.company.tables.Computers;
 import com.company.tables.Customers;
 import com.company.tables.Orders;
