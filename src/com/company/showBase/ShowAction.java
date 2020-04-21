@@ -31,7 +31,7 @@ public class ShowAction {
                     break;
                 case 4:
                     showLoop = false;
-                    continue;
+                    break;
                 default:
                     System.out.println("Такого номера нет, повторите Ваш выбор:");
             }

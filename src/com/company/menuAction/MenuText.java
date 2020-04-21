@@ -87,7 +87,12 @@ public class MenuText {
         System.out.println("3. Изменить количество приобретенных компьютеров.");
         System.out.println("4. Изменить сумму итого.");
         System.out.println("5. Вернуться в главное меню.");
-
     }
 
+    public static void deleteMenu () {
+        System.out.println("1. Удалить компьютер из таблицы Компьютеры по порядковому номеру.");
+        System.out.println("2. Удалить заказчика из таблицы Заказчики по порядковому номеру.");
+        System.out.println("3. Удалить заказ из таблицы Заказы по порядковому номеру.");
+        System.out.println("4. Вернуться в главное меню.");
+    }
 }

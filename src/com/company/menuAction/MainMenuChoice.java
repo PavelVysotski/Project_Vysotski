@@ -2,6 +2,7 @@ package com.company.menuAction;
 
 import com.company.CommandReader;
 import com.company.baseConnection.JoinConnection;
+import com.company.editBase.DeleteChoice;
 import com.company.editBase.UpdateChoice;
 import com.company.showBase.JoinAction;
 import com.company.showBase.ShowAction;
@@ -41,6 +42,8 @@ public class MainMenuChoice {
                     break;
                 case 7:
                     UpdateChoice.update();
+                case 8:
+                    DeleteChoice.delete();
                 case 9:
                     mainLoop = false;
                     break;

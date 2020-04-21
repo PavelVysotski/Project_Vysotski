@@ -27,6 +27,12 @@ public class UpdateChoice {
                     UpdateOrdersChoice.choiceUpdate();
                     System.out.println("-----------------");
                     ShowAllDb.showAllOrders();
+                    break;
+                case 4:
+                    updateLoop = false;
+                    break;
+                default:
+                    System.out.println("Такого номера нет, повторите Ваш выбор:");
             }
         }
     }

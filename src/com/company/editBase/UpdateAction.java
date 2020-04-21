@@ -5,8 +5,6 @@ import com.company.baseConnection.ComputersConnection;
 import com.company.baseConnection.CustomersConnection;
 import com.company.baseConnection.OrdersConnection;
 import com.company.menuAction.MenuText;
-import com.company.showBase.ShowAllDb;
-import com.company.showBase.ShowFromID;
 import com.company.tables.Computers;
 import com.company.tables.Customers;
 import com.company.tables.Orders;
@@ -96,7 +94,7 @@ public class UpdateAction {
                     break;
                 case 10:
                     updateLoop = false;
-                    continue;
+                    break;
                 default:
                     System.out.println("Такого номера нет, повторите Ваш выбор:");
             }
@@ -120,6 +118,7 @@ public class UpdateAction {
         int customNumb = CommandReader.readNumber("Введите порядковый номер заказчика: ");
         Customers customers = CustomersConnection.selectFromId(customNumb);
         while (updateLoop) {
+            MenuText.choiceUpdateCustom();
             int updateChoice = CommandReader.readNumber("Ваш выбор: ");
             switch (updateChoice) {
                 case 1:
@@ -162,6 +161,7 @@ public class UpdateAction {
         int ordersNumb = CommandReader.readNumber("Ваш порядковый номер заказа: ");
         Orders orders = OrdersConnection.selectFromId(ordersNumb);
         while (updateLoop) {
+            MenuText.choiceUpdateOrders();
             int updateChoice = CommandReader.readNumber("Ваш выбор");
             switch (updateChoice) {
                 case 1:

@@ -23,7 +23,7 @@ public class JoinAction {
                     break;
                 case 3:
                     joinLoop = false;
-                    continue;
+                    break;
                 default:
                     System.out.println("Такого номера нет, повторите Ваш выбор:");
             }
