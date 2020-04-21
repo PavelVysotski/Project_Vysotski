@@ -14,13 +14,26 @@ public class DeleteChoice {
             int choiceDelete = CommandReader.readNumber("Ваш выбор: ");
             switch (choiceDelete) {
                 case 1:
-                    DeleteAction.deleteComp();
+                    try {
+                        DeleteAction.deleteComp();
+                    } catch (SQLException e) {
+                        System.out.println("----------------");
+                        System.out.println("Необходимо сначала удалить данный компьютер из таблицы Заказов");
+                        System.out.println("----------------");
+                    }
                     break;
                 case 2:
-                    DeleteAction.deleteCustom();
+                    try{
+                    DeleteAction.deleteCustom();}
+                    catch (SQLException e) {
+                        System.out.println("----------------");
+                        System.out.println("Необходимо сначала удалить данного заказчика из таблицы Заказов");
+                        System.out.println("----------------");
+                    }
                     break;
                 case 3:
                     DeleteAction.deleteOrders();
+                    System.out.println("--------------------------------");
                     break;
                 case 4:
                     choiceLoop = false;

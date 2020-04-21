@@ -8,7 +8,7 @@ import com.company.showBase.ShowFromID;
 
 import java.sql.SQLException;
 
-public class ShowAction {
+public class ShowChoice {
     public static void show() throws SQLException {
         boolean showLoop = true;
         while (showLoop) {

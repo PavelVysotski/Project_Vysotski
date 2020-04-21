@@ -15,6 +15,7 @@ public class UpdateAction {
 
     public static void updateCompFromId() throws SQLException {
 
+
         int compNumb = CommandReader.readNumber("Введите порядковый номер компьютера: ");
         Computers computers = ComputersConnection.selectFromId(compNumb);
         String option = CommandReader.readString("Введите новый вариант конфигурации: ");

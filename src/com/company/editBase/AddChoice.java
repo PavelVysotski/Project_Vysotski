@@ -19,15 +19,18 @@ public class AddChoice {
                 case 1:
                     AddAction.addComputers();
                     ComputersConnection.selectAll();
+                    System.out.println("--------------------------------");
                     break;
                 case 2:
                     AddAction.addCustomers();
                     CustomersConnection.selectAll();
+                    System.out.println("--------------------------------");
                     break;
                 case 3:
                     ShowAllDb.showAllComp();
                     ShowAllDb.showAllCustom();
                     AddAction.addOrders();
+                    System.out.println("--------------------------------");
                     break;
                 case 4:
                     addLoop = false;

@@ -6,7 +6,7 @@ import com.company.menuAction.MenuText;
 
 import java.sql.SQLException;
 
-public class JoinAction {
+public class JoinChoice {
     public static void join() throws SQLException {
         boolean joinLoop = true;
         while (joinLoop) {
@@ -17,9 +17,11 @@ public class JoinAction {
             switch (joinChoice) {
                 case 1:
                     JoinConnection.infoCompId();
+                    System.out.println("--------------------------------");
                     break;
                 case 2:
                     JoinConnection.infoCustomId();
+                    System.out.println("--------------------------------");
                     break;
                 case 3:
                     joinLoop = false;

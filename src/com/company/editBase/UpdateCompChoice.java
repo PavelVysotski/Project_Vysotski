@@ -13,10 +13,22 @@ public class UpdateCompChoice {
             int choiceUpdate = CommandReader.readNumber("Ваш выбор: ");
             switch (choiceUpdate) {
                 case 1:
-                    UpdateAction.updateCompFromId();
+                    try {
+                        UpdateAction.updateCompFromId();
+                    } catch (SQLException e) {
+                        System.out.println("----------------");
+                        System.out.println("Вариант конфигурации не должен повторяться, повторите ввод:");
+                        System.out.println("----------------");
+                    }
                     break;
                 case 2:
-                    UpdateAction.updateCompFromChoice();
+                    try {
+                        UpdateAction.updateCompFromChoice();
+                    } catch (SQLException e) {
+                        System.out.println("----------------");
+                        System.out.println("Вариант конфигурации не должен повторяться, повторите ввод:");
+                        System.out.println("----------------");
+                    }
                     break;
                 case 3:
                     choiceLoop = false;
