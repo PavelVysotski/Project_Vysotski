@@ -1,8 +1,8 @@
-package com.company.showBase;
+package com.company.show.base;
 
 import com.company.CommandReader;
-import com.company.baseConnection.JoinConnection;
-import com.company.menuAction.MenuText;
+import com.company.base.connection.JoinConnection;
+import com.company.menu.action.MenuText;
 
 import java.sql.SQLException;
 

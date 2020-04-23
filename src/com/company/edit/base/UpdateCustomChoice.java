@@ -1,22 +1,22 @@
-package com.company.editBase;
+package com.company.edit.base;
 
 import com.company.CommandReader;
-import com.company.menuAction.MenuText;
+import com.company.menu.action.MenuText;
 
 import java.sql.SQLException;
 
-public class UpdateOrdersChoice {
+public class UpdateCustomChoice {
     public static void choiceUpdate() throws SQLException {
         boolean choiceLoop = true;
         while (choiceLoop) {
-            MenuText.choiceUpdateOrdersMenu();
+            MenuText.choiceUpdateCustomMenu();
             int choiceUpdate = CommandReader.readNumber("Ваш выбор: ");
             switch (choiceUpdate) {
                 case 1:
-                    UpdateAction.updateOrdersFromId();
+                    UpdateAction.updateCustomFromId();
                     break;
                 case 2:
-                    UpdateAction.updateOrdersFromChoice();
+                    UpdateAction.updateCustomFromChoice();
                     break;
                 case 3:
                     choiceLoop = false;

@@ -1,4 +1,4 @@
-package com.company.baseConnection;
+package com.company.base.connection;
 
 import com.company.tables.Computers;
 import com.company.util.ComputersUtil;

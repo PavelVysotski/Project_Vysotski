@@ -1,8 +1,8 @@
-package com.company.editBase;
+package com.company.edit.base;
 
 import com.company.CommandReader;
-import com.company.menuAction.MenuText;
-import com.company.showBase.ShowAllDb;
+import com.company.menu.action.MenuText;
+import com.company.show.base.ShowAllDb;
 
 import java.sql.SQLException;
 

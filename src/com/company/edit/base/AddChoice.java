@@ -1,10 +1,10 @@
-package com.company.editBase;
+package com.company.edit.base;
 
 import com.company.CommandReader;
-import com.company.baseConnection.ComputersConnection;
-import com.company.baseConnection.CustomersConnection;
-import com.company.showBase.ShowAllDb;
-import com.company.menuAction.MenuText;
+import com.company.base.connection.ComputersConnection;
+import com.company.base.connection.CustomersConnection;
+import com.company.show.base.ShowAllDb;
+import com.company.menu.action.MenuText;
 
 import java.sql.SQLException;
 

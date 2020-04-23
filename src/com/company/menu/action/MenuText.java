@@ -1,4 +1,4 @@
-package com.company.menuAction;
+package com.company.menu.action;
 
 public class MenuText {
     public static void mainMenu() {

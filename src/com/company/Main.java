@@ -1,6 +1,6 @@
 package com.company;
 
-import com.company.menuAction.MainMenuChoice;
+import com.company.menu.action.MainMenuChoice;
 
 import java.sql.SQLException;
 

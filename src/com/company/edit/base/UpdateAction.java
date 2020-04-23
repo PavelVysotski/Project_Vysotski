@@ -1,10 +1,10 @@
-package com.company.editBase;
+package com.company.edit.base;
 
 import com.company.CommandReader;
-import com.company.baseConnection.ComputersConnection;
-import com.company.baseConnection.CustomersConnection;
-import com.company.baseConnection.OrdersConnection;
-import com.company.menuAction.MenuText;
+import com.company.base.connection.ComputersConnection;
+import com.company.base.connection.CustomersConnection;
+import com.company.base.connection.OrdersConnection;
+import com.company.menu.action.MenuText;
 import com.company.tables.Computers;
 import com.company.tables.Customers;
 import com.company.tables.Orders;

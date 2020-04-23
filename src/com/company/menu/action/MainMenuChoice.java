@@ -1,13 +1,13 @@
-package com.company.menuAction;
+package com.company.menu.action;
 
 import com.company.CommandReader;
-import com.company.baseConnection.JoinConnection;
-import com.company.editBase.DeleteChoice;
-import com.company.editBase.UpdateChoice;
-import com.company.showBase.JoinChoice;
-import com.company.showBase.ShowChoice;
-import com.company.showBase.ShowAllDb;
-import com.company.editBase.AddChoice;
+import com.company.base.connection.JoinConnection;
+import com.company.edit.base.DeleteChoice;
+import com.company.edit.base.UpdateChoice;
+import com.company.show.base.JoinChoice;
+import com.company.show.base.ShowChoice;
+import com.company.show.base.ShowAllDb;
+import com.company.edit.base.AddChoice;
 
 import java.sql.SQLException;
 

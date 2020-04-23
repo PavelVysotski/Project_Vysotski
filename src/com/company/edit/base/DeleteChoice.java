@@ -1,7 +1,7 @@
-package com.company.editBase;
+package com.company.edit.base;
 
 import com.company.CommandReader;
-import com.company.menuAction.MenuText;
+import com.company.menu.action.MenuText;
 
 import java.sql.SQLException;
 
